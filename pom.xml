@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>jda-commands</artifactId>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>11</source>
+          <target>11</target>
+        </configuration>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>3.8.1</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <id>attach-javadocs</id>
+            <phase>verify</phase>
+          </execution>
+        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>3.1.1</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+            <id>attach-sources</id>
+            <phase>verify</phase>
+          </execution>
+        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>3.1.0</version>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <artifactId>JDA</artifactId>
+      <groupId>net.dv8tion</groupId>
+      <version>4.0.0_46</version>
+    </dependency>
+  </dependencies>
+  <description>Command framework for JDA</description>
+  <developers>
+    <developer>
+      <email>mdashlw@gmail.com</email>
+      <id>mdashlw</id>
+      <name>Davyd Malikov</name>
+      <roles>
+        <role>Maintainer</role>
+      </roles>
+      <timezone>Europe/Moscow</timezone>
+    </developer>
+  </developers>
+
+  <distributionManagement>
+    <repository>
+      <id>bintray-mdashlw-maven</id>
+      <name>mdashlw-maven</name>
+      <url>https://api.bintray.com/maven/mdashlw/maven/jda-commands/;publish=1</url>
+    </repository>
+  </distributionManagement>
+  <groupId>ru.mdashlw.jda.commands</groupId>
+  <inceptionYear>2019</inceptionYear>
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/mdashlw/jda-commands/issues</url>
+  </issueManagement>
+  <licenses>
+    <license>
+      <distribution>repo</distribution>
+      <name>Apache-2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>ru.mdashlw.jda.commands jda-commands</name>
+  <packaging>jar</packaging>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>jcenter</id>
+      <name>jcenter</name>
+      <url>http://jcenter.bintray.com/</url>
+    </repository>
+  </repositories>
+
+  <scm>
+    <connection>scm:git:https://github.com/mdashlw/jda-commands</connection>
+    <developerConnection>scm:git:https://github.com/mdashlw/jda-commands</developerConnection>
+    <url>https://github.com/mdashlw/jda-commands</url>
+  </scm>
+
+  <url>https://github.com/mdashlw/jda-commands</url>
+
+  <version>1.0.0</version>
+</project>
